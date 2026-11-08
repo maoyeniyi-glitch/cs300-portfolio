@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mohammed Oyeniyi's computer science portfolio, featuring web development and JavaScript projects.">
+  <meta name="description"
+        content="Mohammed Oyeniyi's portfolio of web development and JavaScript projects.">
   <title>Mohammed Oyeniyi | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a href="#main">Skip to main content</a>
 
-  <header>
-    <a href="#introduction">Mohammed Oyeniyi</a>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="#introduction">Mohammed Oyeniyi</a>
+
     <nav aria-label="Main navigation">
-      <ul>
+      <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -24,37 +27,257 @@
   </header>
 
   <main id="main">
-    <section id="introduction">
+    <section id="introduction" class="hero">
+      <p class="eyebrow">Student portfolio</p>
       <h1>Mohammed Oyeniyi</h1>
-      <p>Computer science student interested in web development and network security.</p>
-      <p>Welcome to my portfolio. Explore my projects and the skills I am building.</p>
-      <a href="#projects">See my projects</a>
+      <p class="headline">
+        Computer science student building skills in web development
+        and network security.
+      </p>
+      <p>
+        Welcome to my portfolio. Here you can explore my projects,
+        learn about my approach, and see what I want to improve next.
+      </p>
+      <a class="button" href="#projects">See my projects</a>
     </section>
 
     <section id="projects">
-      <!-- Add your two project cards and case studies here. -->
+      <h2>My projects</h2>
+      <p>
+        These CS300 projects show my work with responsive layouts
+        and JavaScript data processing.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>River Workshop</h3>
+          <p>
+            A responsive landing page for a fictional community
+            workshop covering HTML, CSS, and keyboard usability.
+          </p>
+          <p class="project-tools">HTML · CSS · Responsive design</p>
+          <a href="https://maoyeniyi-glitch.github.io/cs300-assignment-2-/">
+            Visit River Workshop
+          </a>
+          <a href="#river-case">Read the River Workshop case study</a>
+        </article>
+
+        <article class="project-card">
+          <h3>JavaScript Data Toolkit</h3>
+          <p>
+            A console toolkit that searches, filters, sorts,
+            and summarizes a collection of books.
+          </p>
+          <p class="project-tools">JavaScript · Node.js · Testing</p>
+          <a href="https://github.com/maoyeniyi-glitch/cs300-assignment-3">
+            View the toolkit repository
+          </a>
+          <a href="#toolkit-case">Read the toolkit case study</a>
+        </article>
+      </div>
+
+      <article id="river-case" class="case-study">
+        <h3>Case study: River Workshop</h3>
+
+        <h4>What was it?</h4>
+        <p>
+          I built a responsive landing page for River Workshop,
+          a fictional community workshop. It introduces three
+          practice sessions and gives visitors a clear way to
+          explore them.
+        </p>
+
+        <h4>Who was it for?</h4>
+        <p>
+          The page was designed for beginners interested in HTML,
+          CSS, and keyboard usability. It needed to remain readable
+          on phones, tablets, and computers.
+        </p>
+
+        <h4>How did I make it?</h4>
+        <p>
+          I planned the header, introduction, session cards, About
+          section, and footer. I built the content with HTML,
+          styled it with CSS, and published it through GitHub Pages.
+        </p>
+
+        <h4>One decision and why</h4>
+        <p>
+          I used Grid for the session cards and Flexbox for the
+          navigation. These let the cards and links change their
+          arrangement as more screen space became available.
+        </p>
+
+        <h4>What did I check?</h4>
+        <p>
+          My assignment record documents checks at 375px, 768px,
+          and 1280px, along with keyboard focus and horizontal
+          scrolling. The recorded results showed stacked cards
+          on phones and multiple columns on wider screens.
+        </p>
+
+        <h4>What would I improve?</h4>
+        <p>
+          I noticed an extra less-than symbol above the header
+          on the published page. I would remove it and check the
+          HTML for other markup errors.
+        </p>
+
+        <a href="https://github.com/maoyeniyi-glitch/cs300-assignment-2-/">
+          View the River Workshop source code
+        </a>
+      </article>
+
+      <article id="toolkit-case" class="case-study">
+        <h3>Case study: JavaScript Data Toolkit</h3>
+
+        <h4>What was it?</h4>
+        <p>
+          I built a JavaScript console program that searches,
+          filters, sorts, and summarizes book records. It helps
+          users find books and see their total reading time.
+        </p>
+
+        <h4>Who was it for?</h4>
+        <p>
+          It was for people choosing books based on their interests
+          and available reading time. I built it for CS300 and used
+          Node.js to run the program in the console.
+        </p>
+
+        <h4>How did I make it?</h4>
+        <p>
+          I organized the code into separate functions for
+          validation, normalization, filtering, searching, sorting,
+          summaries, and reports. I used a verification harness to
+          compare expected results with actual results.
+        </p>
+
+        <h4>One decision and why</h4>
+        <p>
+          I made a copy of the book array before sorting it.
+          This allowed the program to return books in reading-time
+          order without changing the original list.
+        </p>
+
+        <h4>What did I check?</h4>
+        <p>
+          My assignment record reports passing checks for empty
+          lists, missing titles, invalid reading times, searches
+          with different capitalization, and unchanged original
+          data. Equal-value sorting was marked as not tested.
+        </p>
+
+        <h4>What would I improve?</h4>
+        <p>
+          Next, I would test books with the same reading time to
+          check whether the title tie-breaker sorts them
+          alphabetically. That would cover a gap in my existing
+          test record.
+        </p>
+
+        <a href="https://github.com/maoyeniyi-glitch/cs300-assignment-3">
+          Explore the JavaScript toolkit
+        </a>
+      </article>
     </section>
 
     <section id="about">
-      <!-- Add your About heading and paragraph here. -->
+      <h2>About me</h2>
+      <p>
+        I am a computer science student at Northeastern Illinois
+        University, concentrating on Computer Networks and Security.
+        I am also learning HTML, CSS, and JavaScript through
+        hands-on projects.
+      </p>
+      <p>
+        My goal is to improve my programming skills and gain
+        experience through an internship. I enjoy breaking a problem
+        into smaller parts and learning how those parts work together.
+      </p>
     </section>
 
     <section id="skills">
-      <!-- Connect each skill to a project that demonstrates it. -->
+      <h2>Skills shown in my work</h2>
+      <ul class="skills-list">
+        <li>
+          <strong>HTML structure:</strong>
+          <a href="#river-case">River Workshop</a>
+          organizes content into clear page sections.
+        </li>
+        <li>
+          <strong>Responsive CSS:</strong>
+          <a href="#river-case">River Workshop</a>
+          uses Flexbox, Grid, and media queries.
+        </li>
+        <li>
+          <strong>JavaScript functions:</strong>
+          <a href="#toolkit-case">My data toolkit</a>
+          separates data operations into reusable functions.
+        </li>
+        <li>
+          <strong>Verification:</strong>
+          <a href="#toolkit-case">My toolkit harness</a>
+          compares expected and actual results.
+        </li>
+        <li>
+          <strong>GitHub publishing:</strong>
+          <a href="https://maoyeniyi-glitch.github.io/cs300-assignment-2-/">
+            River Workshop
+          </a>
+          is published through GitHub Pages.
+        </li>
+      </ul>
     </section>
 
     <section id="resume">
-      <!-- Add your education and relevant experience here. -->
+      <h2>Resume overview</h2>
+
+      <h3>Education</h3>
+      <p>
+        <strong>Northeastern Illinois University</strong><br>
+        Bachelor of Science in Computer Science — in progress<br>
+        Concentration: Computer Networks and Security
+      </p>
+
+      <h3>Relevant coursework</h3>
+      <ul>
+        <li>Client-Side Web Development</li>
+        <li>Object-Oriented Programming and Data Structures</li>
+        <li>Design of Algorithms</li>
+        <li>Computer Organization</li>
+      </ul>
+
+      <h3>Project experience</h3>
+      <p>
+        Built a responsive workshop website and a JavaScript
+        book-data toolkit through CS300 coursework.
+        See the project case studies for details and limitations.
+      </p>
+
+      <h3>Career goal</h3>
+      <p>
+        Seeking an internship where I can keep learning,
+        contribute to a team, and apply my computer science skills.
+      </p>
     </section>
 
     <section id="contact">
-      <!-- Add a professional profile link here. -->
+      <h2>Contact</h2>
+      <p>
+        Visit my GitHub profile to explore my repositories
+        and see more of my work.
+      </p>
+      <a class="button" href="https://github.com/maoyeniyi-glitch">
+        Visit my GitHub profile
+      </a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Mohammed Oyeniyi</p>
-    <a href="https://github.com/maoyeniyi-glitch">GitHub profile</a>
+    <a href="https://github.com/maoyeniyi-glitch">GitHub</a>
+    <a href="#introduction">Back to top</a>
   </footer>
 
   <script src="app.js"></script>
