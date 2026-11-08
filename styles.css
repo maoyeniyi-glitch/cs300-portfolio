@@ -178,6 +178,23 @@ p {
   color: var(--navy);
 }
 
+/* Improvement 2: make the mobile menu button distinct. */
+.menu-toggle {
+  min-height: 44px;
+  margin-top: 0;
+  border: 2px solid var(--white);
+  background: var(--white);
+  color: var(--navy);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  background: var(--light-gray);
+  color: var(--navy);
+}
+
 /* Cards start in one column on phones. */
 .project-grid {
   display: grid;
@@ -209,7 +226,7 @@ p {
   font-weight: bold;
 }
 
-/* These rules will also style your project screenshots. */
+/* Display screenshots without stretching their proportions. */
 .project-card img {
   display: block;
   width: 100%;
@@ -258,7 +275,7 @@ p {
   margin: 0;
 }
 
-/* On wider screens, show the project cards side by side. */
+/* Show project cards side by side on wider screens. */
 @media (min-width: 600px) {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -293,7 +310,7 @@ p {
   }
 }
 
-/* Enable smooth scrolling only when reduced motion is not requested. */
+/* Respect the visitor's reduced-motion preference. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
